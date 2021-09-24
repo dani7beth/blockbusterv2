@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store: one
+  title: MyString
+  genre: MyString
+  duration: 2021-09-24 10:44:01
+  description: MyString
+
+two:
+  store: two
+  title: MyString
+  genre: MyString
+  duration: 2021-09-24 10:44:01
+  description: MyString
