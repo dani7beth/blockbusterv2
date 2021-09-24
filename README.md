@@ -11,6 +11,6 @@
 7. `yarn start`
 
 ### handle git
-
+Only do these steps if you are creating your own repo based off this code
 1.  - remove origin `git remote rm origin`
     - git add remote origin to new repo
