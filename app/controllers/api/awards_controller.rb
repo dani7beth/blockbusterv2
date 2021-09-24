@@ -15,6 +15,7 @@ class Api::AwardsController < ApplicationController
       render json: @new_award
     else
       render json: {errors: @new_award.errors}, status: 422
+    end
   end
 
   def update
