@@ -5,7 +5,7 @@ class Api::StoresController < ApplicationController
   end
 
   def show
-    render json: @stores
+    render json: @store
   end
 
   def create
