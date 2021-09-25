@@ -1,5 +1,6 @@
 class Api::StoresController < ApplicationController
   before_action :set_store, only: [:show, :update, :destroy]
+
   def index
     render json: Store.all
   end
