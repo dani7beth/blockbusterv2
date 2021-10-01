@@ -1,6 +1,5 @@
 class Api::AwardsController < ApplicationController
   before_action :set_award, only: [:show, :update, :destroy]
-  
   def index
     render json: Award.awards
   end
@@ -35,6 +34,7 @@ class Api::AwardsController < ApplicationController
   def set_award
     @award = Award.find(params[:id])
   end
+  
   def award_params
     params.require(:award).permit(:name)
   end
