@@ -9,21 +9,26 @@ import Movie from "./Movies/Movie";
 import NavBar from "./Components/NavBar";
 import Actors from "./Actors/Actors";
 import Actor from "./Actors/Actor";
+import Login from "./Pages/Login";
+import FetchUser from "./Components/FetchUser";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/stores" component={Stores} />
-        <Route exact path="/stores/:id" component={Store} />
-        <Route exact path="/stores/:id/movies" component={Movies} />
-        <Route exact path="/stores/:store_id/movies/:id" component={Movie} />
-        <Route exact path="/movies/:id/actors" component={Actors} />
-        <Route exact path="/movies/:movie_id/actors/:id" component={Actor} />
-        <Route component={NotFound} />
-      </Switch>
+      <FetchUser>
+        <Switch>
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/stores" component={Stores} />
+          <Route exact path="/stores/:id" component={Store} />
+          <Route exact path="/stores/:id/movies" component={Movies} />
+          <Route exact path="/stores/:store_id/movies/:id" component={Movie} />
+          <Route exact path="/movies/:id/actors" component={Actors} />
+          <Route exact path="/movies/:movie_id/actors/:id" component={Actor} />
+          <Route component={NotFound} />
+        </Switch>
+      </FetchUser>
     </div>
   );
 }
