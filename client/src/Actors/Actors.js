@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Alert } from "react-bootstrap";
+
 const Actors = ({ match }) => {
   const { id } = match.params;
   const [actors, setActors] = useState([]);

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Reviews from "../Reviews/Reviews";
 
 const Movie = ({ match }) => {
   const { id, store_id } = match.params;
@@ -35,6 +36,11 @@ const Movie = ({ match }) => {
       <p>Duration: {movie.duration}</p>
       <p>${movie.price}</p>
       <h3>Actors</h3>
+      <Link to={`/movies/${id}/actors`} style={{ textDecoration: "none" }}>
+        Check Out Actors
+      </Link>
+      <h3>Reviews</h3>
+      <Reviews movie_id={id} />
     </>
   );
 };
